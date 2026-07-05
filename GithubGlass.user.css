@@ -1,0 +1,82 @@
+/* ==UserStyle==
+@name           github glass
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Glassy flyouts and menus for Github
+@author         gameknight963
+
+==/UserStyle== */
+
+@-moz-document url-prefix("https://github.com/") {
+    
+    div[data-component="AnchoredOverlay"],
+    dialog[data-target="select-panel.dialog"],
+    div[data-component="ActionMenu.Overlay"],
+    div.Overlay,
+    #repository-suggestions, 
+    dialog,
+    .SelectMenu-modal,
+    .SelectMenu-list,
+    .SelectMenu-item,
+    .Popover-message,
+    div[role="alertdialog"],
+    
+    .select-menu-modal,
+    .select-menu-item,
+    
+    div[role="menu"],
+    div[role="dialog"],
+    .BlobViewHeader-module__Box_1__VEmuQ,
+    .FileNameStickyHeader-module__outerWrapper__ZL4Xc,
+    .OverviewRepoFiles-module__Box_3__bBU1C,
+    #issue-viewer-sticky-header,
+    .search-suggestions,
+    details-dialog
+    {
+        background: transparent !important;
+        backdrop-filter: blur(6px) saturate(1.2) brightness(1.1) !important;   
+    }
+    
+    span[data-component="Tooltip"]
+    {
+        background: transparent !important;
+        backdrop-filter: blur(6px) saturate(1.5) brightness(1.5) !important;   
+    }
+
+    
+    .Box-header,
+    #repo_homepage,
+    #repo_description,
+    .tag-input
+    {
+        background: rgba(21, 27, 35, 0.5) !important;
+    }
+    
+    #repo_topics
+    {
+        background: rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    button.SelectMenu-closeButton:nth-child(1) {
+        visibility: hidden;
+    }
+    
+    button.SelectMenu-closeButton:nth-child(1)
+    {
+        visibility: hidden;
+    }
+    
+    .copilotPreview__container,
+    .CopilotItems-module__Wrapper__BFG9q,
+    li.ActionList-sectionDivider:nth-child(5),
+    .search-feedback-prompt
+    {
+        display: none !important;
+    }
+     
+    /* fix Discussions background. Transparent background causes issues with blur*/
+    .clearfix
+    {
+        background: #0f1218    
+    }
+}
