@@ -8,22 +8,23 @@
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://github.com/") {
-    
+
+    /* Glassy overlays, menus, dialogs, and suggestions */
     div[data-component="AnchoredOverlay"],
     dialog[data-target="select-panel.dialog"],
     div[data-component="ActionMenu.Overlay"],
     div.Overlay,
-    #repository-suggestions, 
+    #repository-suggestions,
     dialog,
     .SelectMenu-modal,
     .SelectMenu-list,
     .SelectMenu-item,
     .Popover-message,
     div[role="alertdialog"],
-    
+
     .select-menu-modal,
     .select-menu-item,
-    
+
     div[role="menu"],
     div[role="dialog"],
     .BlobViewHeader-module__Box_1__VEmuQ,
@@ -31,19 +32,33 @@
     .OverviewRepoFiles-module__Box_3__bBU1C,
     #issue-viewer-sticky-header,
     .search-suggestions,
-    details-dialog
+    details-dialog,
+
+    /* Added from second version */
+    #repos-finder-filter-suggestions,
+    #notification-shelf,
+    .AutocompleteSuggestions-module__Overlay_0__vvRZH,
+    div[data-component="Popover.Content"],
+    .ReposFileTreePane-module__Overlay__Lgnte
     {
         background: transparent !important;
-        backdrop-filter: blur(6px) saturate(1.2) brightness(1.1) !important;   
+        backdrop-filter: blur(6px) saturate(1.2) brightness(1.1) !important;
     }
-    
+
+    /* Tooltips */
     span[data-component="Tooltip"]
     {
         background: transparent !important;
-        backdrop-filter: blur(6px) saturate(1.5) brightness(1.5) !important;   
+        backdrop-filter: blur(6px) saturate(1.5) brightness(1.5) !important;
     }
 
-    
+    /* Remove inset backgrounds */
+    .bgColor-inset
+    {
+        background: transparent !important;
+    }
+
+    /* Repository sections */
     .Box-header,
     #repo_homepage,
     #repo_description,
@@ -51,21 +66,19 @@
     {
         background: rgba(21, 27, 35, 0.5) !important;
     }
-    
+
     #repo_topics
     {
         background: rgba(0, 0, 0, 0.2) !important;
     }
-    
-    button.SelectMenu-closeButton:nth-child(1) {
-        visibility: hidden;
-    }
-    
+
+    /* Hide SelectMenu close button */
     button.SelectMenu-closeButton:nth-child(1)
     {
         visibility: hidden;
     }
-    
+
+    /* Hide Copilot / search UI elements */
     .copilotPreview__container,
     .CopilotItems-module__Wrapper__BFG9q,
     li.ActionList-sectionDivider:nth-child(5),
@@ -73,10 +86,11 @@
     {
         display: none !important;
     }
-     
-    /* fix Discussions background. Transparent background causes issues with blur*/
+
+    /* Fix Discussions background.
+       Transparent background causes issues with blur. */
     .clearfix
     {
-        background: #0f1218    
+        background: #0f1218;
     }
 }
