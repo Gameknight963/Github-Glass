@@ -12,10 +12,6 @@ You can open issues for feature requests, broken/unthemed elements, whatever.
 
 ![](https://i.imgur.com/lI1FZTh.png)
 
-*will remove copilot from this menu soon*
-
 ![](https://i.imgur.com/vk5K7rV.png)
-
-*no copilot here!*
 
 ![](https://i.imgur.com/Wakdve7.png)
