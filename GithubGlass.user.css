@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           github glass
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.1.0
 @description    Glassy flyouts and menus for Github
 @author         gameknight963
 
@@ -27,33 +27,44 @@
 
     div[role="menu"],
     div[role="dialog"],
+    div[data-component="PageHeader"],
     .BlobViewHeader-module__Box_1__VEmuQ,
     .FileNameStickyHeader-module__outerWrapper__ZL4Xc,
     .OverviewRepoFiles-module__Box_3__bBU1C,
     #issue-viewer-sticky-header,
     .search-suggestions,
     details-dialog,
-
-    /* Added from second version */
+    div[data-target="actions-workflow-filter.autocompleteDropdown"],
+    .dropdown-menu,
+    #repo-pulls-dashboard-filter-suggestions,
     #repos-finder-filter-suggestions,
     #notification-shelf,
     .AutocompleteSuggestions-module__Overlay_0__vvRZH,
     div[data-component="Popover.Content"],
-    .ReposFileTreePane-module__Overlay__Lgnte
+    .ReposFileTreePane-module__Overlay__Lgnte,
+    .OverviewRepoFiles-module_pEDwGW_Box_3
     {
         background: transparent !important;
         backdrop-filter: blur(6px) saturate(1.2) brightness(1.1) !important;
     }
-
+    
+    /* transparentish textboxes */
+    span[data-component="TextInput"],
+    span[data-component="TextInputWithTokens"]
+    {
+        background-color: rgba(13, 17, 23, .25)
+    }
+    
     /* Tooltips */
     span[data-component="Tooltip"]
     {
         background: transparent !important;
         backdrop-filter: blur(6px) saturate(1.5) brightness(1.5) !important;
     }
-
-    /* Remove inset backgrounds */
-    .bgColor-inset
+    
+    .bgColor-inset,
+    li[data-testid="check-run-item"],
+    li.mt-1
     {
         background: transparent !important;
     }
