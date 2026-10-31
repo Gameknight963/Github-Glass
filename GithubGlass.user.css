@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           github glass
 @namespace      github.com/openstyles/stylus
-@version        1.1.0
+@version        1.1.1
 @description    Glassy flyouts and menus for Github
 @author         gameknight963
 
@@ -41,8 +41,9 @@
     #notification-shelf,
     .AutocompleteSuggestions-module__Overlay_0__vvRZH,
     div[data-component="Popover.Content"],
-    .ReposFileTreePane-module__Overlay__Lgnte,
-    .OverviewRepoFiles-module_pEDwGW_Box_3
+    div[class*="ReposFileTreePane"],
+    .OverviewRepoFiles-module_pEDwGW_Box_3,
+    .session-authentication
     {
         background: transparent !important;
         backdrop-filter: blur(6px) saturate(1.2) brightness(1.1) !important;
@@ -52,7 +53,7 @@
     span[data-component="TextInput"],
     span[data-component="TextInputWithTokens"]
     {
-        background-color: rgba(13, 17, 23, .25)
+        background-color: rgba(13, 17, 23, .25) !important;
     }
     
     /* Tooltips */
@@ -69,13 +70,17 @@
         background: transparent !important;
     }
 
-    /* Repository sections */
     .Box-header,
     #repo_homepage,
     #repo_description,
     .tag-input
     {
         background: rgba(21, 27, 35, 0.5) !important;
+    }
+    
+    .Box
+    {
+        background: rgba(15, 19, 26, .5) !important;
     }
 
     #repo_topics
